@@ -15,7 +15,7 @@ class Bot(object):
 		if self.sc.rtm_connect():
 			logging.info("connected to slack rtm")
 		else:
-			logging.critical("could not connect to slack rtm")
+			logging.error("could not connect to slack rtm")
 			sys.exit(1)
 
 	def start(self):

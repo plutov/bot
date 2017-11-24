@@ -6,4 +6,4 @@ ADD . /
 
 RUN pip install slackclient
 
-CMD [ "python", "./mysql-bot.py" ]
+CMD [ "python", "./game.py" ]
