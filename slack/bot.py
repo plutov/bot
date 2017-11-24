@@ -5,7 +5,7 @@ import logging
 import time
 import sys
 
-class Bot(object):
+class SlackBot(object):
 	def __init__(self, token):
 		self.sc = SlackClient(token)
 

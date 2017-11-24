@@ -1,0 +1,102 @@
+﻿{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "What is a goroutine?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 10,
+            "end": 19,
+            "value": "goroutine",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Who is the president of Vietnam?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 11,
+            "end": 31,
+            "value": "president of Vietnam",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "What is love?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 8,
+            "end": 12,
+            "value": "love",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Who are dinosaurs?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 8,
+            "end": 17,
+            "value": "dinosaurs",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "What is an eclipse?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 11,
+            "end": 18,
+            "value": "eclipse",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Who is a christian?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 9,
+            "end": 18,
+            "value": "christian",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Who is an engineer?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 10,
+            "end": 18,
+            "value": "engineer",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "What is the population of Vietnam?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 12,
+            "end": 33,
+            "value": "population of Vietnam",
+            "entity": "query"
+          }
+        ]
+      }
+    ]
+  }
+}

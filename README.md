@@ -2,6 +2,9 @@
 
 
 ```
-docker build -t game .
-docker run -e SLACK_TOKEN=<token> game
+docker build -t bot . && docker run -e SLACK_TOKEN=<token> bot
 ```
+
+### RASA
+
+Create initial intentions - https://rasahq.github.io/rasa-nlu-trainer/
