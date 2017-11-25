@@ -176,6 +176,54 @@
             "entity": "query"
           }
         ]
+      },
+      {
+        "text": "What is the meaning of life?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 23,
+            "end": 27,
+            "value": "life",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Who is John Lennon?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 7,
+            "end": 18,
+            "value": "John Lennon",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "What is the biggest country in the world?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 12,
+            "end": 40,
+            "value": "biggest country in the world",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "What is the most expensive food in the world?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 12,
+            "end": 44,
+            "value": "most expensive food in the world",
+            "entity": "query"
+          }
+        ]
       }
     ]
   }

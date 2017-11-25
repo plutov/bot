@@ -16,16 +16,10 @@ class Wolfram(object):
 	def get_short_answer(self, query):
 		logging.info("searching in wolfram: {}".format(query))
 
-		res = self.client.query(query)
+		try:
+			res = self.client.query(query)
+			logging.info(res)
 
-		if res.success == "true":
-			msg = ""
-			for pod in res.pods:
-				msg += pod.text
-			return msg
-			
-		if "tips" in res:
-			print(res["tips"]["tip"])
-			return res["tips"]["tip"].text
-
-		return self.NOT_FOUND_MSG
+			return next(res.results).text
+		except:
+			return self.NOT_FOUND_MSG

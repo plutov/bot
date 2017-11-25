@@ -60,7 +60,4 @@ class RasaNLP(object):
 		return random.choice(self.COULD_NOT_PARSE_MSGS)
 
 	def get_short_answer(self, query):
-		try:
-			return self.wolfram.get_short_answer(query)
-		except:
-			return self.wolfram.NOT_FOUND_MSG
+		return self.wolfram.get_short_answer(query)
