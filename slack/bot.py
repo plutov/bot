@@ -6,8 +6,9 @@ import time
 import sys
 
 class SlackBot(object):
-	def __init__(self, token):
+	def __init__(self, token, rasa_nlu):
 		self.sc = SlackClient(token)
+		self.rasa_nlu = rasa_nlu
 
 		logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
@@ -27,8 +28,22 @@ class SlackBot(object):
 			time.sleep(.1)
 
 	def input(self, data):
-		if "type" in data and data["type"] == "message":
+		# do not handle bot messages
+		if "type" in data and not "bot_id" in data and data["type"] == "message":
 			self.process_msg(data)
 
 	def process_msg(self, data):
 		logging.info("received message from {}: {}".format(data["user"], data["text"]))
+		text_to_reply = self.rasa_nlu.find_reply(data["text"])
+		if text_to_reply:
+			self.send_im_msg(data["user"], text_to_reply)
+			
+
+	def send_im_msg(self, user, msg):
+		self.sc.api_call(
+			"chat.postMessage",
+			channel=user,
+			as_user="true",
+			text=msg
+		)
+		logging.info("sent message to {}: {}".format(user, msg))

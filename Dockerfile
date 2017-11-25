@@ -4,7 +4,7 @@ FROM python:3
 
 ADD . /
 
-RUN pip install slackclient rasa_nlu scipy scikit-learn sklearn-crfsuite spacy
+RUN pip install slackclient rasa_nlu scipy scikit-learn sklearn-crfsuite numpy spacy
 RUN python -m spacy download en
 
 CMD [ "python", "./bot.py" ]

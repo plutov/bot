@@ -2,6 +2,21 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
+        "text": "hey", 
+        "intent": "greet", 
+        "entities": []
+      }, 
+      {
+        "text": "howdy", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
+        "text": "hello", 
+        "intent": "greet", 
+        "entities": []
+      },
+      {
         "text": "What is a goroutine?",
         "intent": "whatis",
         "entities": [
