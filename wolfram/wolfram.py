@@ -12,7 +12,6 @@ class Wolfram(object):
 		logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 		logging.info("connected to wolfram")
 
-	# todo : better response parsing
 	def get_short_answer(self, query):
 		logging.info("searching in wolfram: {}".format(query))
 
