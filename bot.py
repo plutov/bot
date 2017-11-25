@@ -4,9 +4,12 @@ import os
 import sys
 from slack.bot import SlackBot
 from nlp.rasa import RasaNLP
+from wolfram.wolfram import Wolfram
 
 try:
-	r = RasaNLP("rasa-config.json", "rasa-data.json", "./rasa-model")
+	w = Wolfram(os.environ.get("WOLFRAM_APP_ID"))
+
+	r = RasaNLP(w, "rasa-config.json", "rasa-data.json", "./rasa-model")
 	r.train()
 
 	b = SlackBot(os.environ.get("SLACK_TOKEN"), r)

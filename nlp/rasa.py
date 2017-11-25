@@ -19,9 +19,10 @@ class RasaNLP(object):
 	INTENT_WHATIS = "whatis"
 	ENTITY_QUERY = "query"
 
-	def __init__(self, config_file, data_file, model_dir):
+	def __init__(self, wolfram, config_file, data_file, model_dir):
 		self.greeted = False
 
+		self.wolfram = wolfram
 		self.data_file = data_file
 		self.model_dir = model_dir
 		self.rasa_config = RasaNLUConfig(config_file)
@@ -54,6 +55,12 @@ class RasaNLP(object):
 		if res["intent"]["name"] == self.INTENT_WHATIS and len(res["entities"]) > 0:
 			for e in res["entities"]:
 				if e["entity"] == self.ENTITY_QUERY:
-					return e["value"]
+					return self.get_short_answer(e["value"])
 
 		return random.choice(self.COULD_NOT_PARSE_MSGS)
+
+	def get_short_answer(self, query):
+		try:
+			return self.wolfram.get_short_answer(query)
+		except:
+			return self.wolfram.NOT_FOUND_MSG

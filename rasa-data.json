@@ -2,18 +2,23 @@
   "rasa_nlu_data": {
     "common_examples": [
       {
-        "text": "hey", 
-        "intent": "greet", 
-        "entities": []
-      }, 
-      {
-        "text": "howdy", 
-        "intent": "greet", 
+        "text": "hey",
+        "intent": "greet",
         "entities": []
       },
       {
-        "text": "hello", 
-        "intent": "greet", 
+        "text": "howdy",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
         "entities": []
       },
       {
@@ -108,6 +113,66 @@
             "start": 12,
             "end": 33,
             "value": "population of Vietnam",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Can you tell me something about Golang?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 32,
+            "end": 38,
+            "value": "Golang",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Do you know who is Riki?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 19,
+            "end": 23,
+            "value": "Riki",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Do you know what is OOP?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 20,
+            "end": 23,
+            "value": "OOP",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Can you give me the price of Bitcoin?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 20,
+            "end": 36,
+            "value": "price of Bitcoin",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Can you give me USD VND rate?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 16,
+            "end": 28,
+            "value": "USD VND rate",
             "entity": "query"
           }
         ]
