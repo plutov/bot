@@ -19,10 +19,10 @@ class RasaNLP(object):
 	INTENT_WHATIS = "whatis"
 	ENTITY_QUERY = "query"
 
-	def __init__(self, wolfram, config_file, data_file, model_dir):
+	def __init__(self, data_provider, config_file, data_file, model_dir):
 		self.greeted = False
 
-		self.wolfram = wolfram
+		self.data_provider = data_provider
 		self.data_file = data_file
 		self.model_dir = model_dir
 		self.rasa_config = RasaNLUConfig(config_file)
@@ -60,4 +60,4 @@ class RasaNLP(object):
 		return random.choice(self.COULD_NOT_PARSE_MSGS)
 
 	def get_short_answer(self, query):
-		return self.wolfram.get_short_answer(query)
+		return self.data_provider.get_short_answer(query)
