@@ -224,6 +224,42 @@
             "entity": "query"
           }
         ]
+      },
+      {
+        "text": "How to boil eggs?",
+        "intent": "howto",
+        "entities": [
+          {
+            "start": 6,
+            "end": 16,
+            "value": " boil eggs",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "How to practice yoga?",
+        "intent": "howto",
+        "entities": [
+          {
+            "start": 7,
+            "end": 20,
+            "value": "practice yoga",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "How to learn programming?",
+        "intent": "howto",
+        "entities": [
+          {
+            "start": 7,
+            "end": 24,
+            "value": "learn programming",
+            "entity": "query"
+          }
+        ]
       }
     ]
   }

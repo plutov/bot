@@ -16,7 +16,7 @@ class RasaNLP(object):
 	]
 	GREET_MSGS = ["Hola!"]
 	INTENT_GREET = "greet"
-	INTENT_WHATIS = "whatis"
+	INTENTS_QUESTION = ["whatis", "howto"]
 	ENTITY_QUERY = "query"
 
 	def __init__(self, data_provider, config_file, data_file, model_dir):
@@ -52,7 +52,7 @@ class RasaNLP(object):
 			self.greeted = True
 			return random.choice(self.GREET_MSGS)
 
-		if res["intent"]["name"] == self.INTENT_WHATIS and len(res["entities"]) > 0:
+		if res["intent"]["name"] in self.INTENTS_QUESTION and len(res["entities"]) > 0:
 			for e in res["entities"]:
 				if e["entity"] == self.ENTITY_QUERY:
 					return self.get_short_answer(e["value"])
