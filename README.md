@@ -6,18 +6,17 @@ Bot using RASA NLU to answer different questions. Using Wolfram Alpha to get ans
 
 ### Run it with Docker
 
-Get Slack API Token first: https://wizeline.slack.com/services/B861V31E3
-
-Get Wolfram App ID: https://developer.wolframalpha.com/portal/myapps/
-
-Wikipedia API doesn't require API key.
-
+ - [Get Slack API Token](https://get.slack.help/hc/en-us/articles/215770388-Create-and-regenerate-API-tokens)
+ - [Get Wolfram App ID](https://developer.wolframalpha.com/portal/myapps/)
+ - Wikipedia API doesn't require API key.
 
 ```
 docker build -t bot . && docker run -e SLACK_TOKEN=<token> -e WOLFRAM_APP_ID=<app_id> bot
 ```
 
 ### Run with Python 3
+
+Install dependencies from Dockerfile and run:
 
 ```
 SLACK_TOKEN=<token> WOLFRAM_APP_ID=<app_id> python3 bot.py
