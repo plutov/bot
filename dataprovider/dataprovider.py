@@ -8,9 +8,9 @@ class DataProvider(object):
 	NOT_FOUND_MSG = "Sorry, I don't know this yet"
 
 	def __init__(self, app_id):
-		self.wolfram_client = wolframalpha.Client(app_id)
-
 		logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
+
+		self.wolfram_client = wolframalpha.Client(app_id)
 		logging.info("connected to wolfram")
 
 	def get_short_answer(self, query):

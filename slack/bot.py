@@ -7,10 +7,10 @@ import sys
 
 class SlackBot(object):
 	def __init__(self, token, rasa_nlu):
+		logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
+
 		self.sc = SlackClient(token)
 		self.rasa_nlu = rasa_nlu
-
-		logging.basicConfig(level=logging.INFO, format='%(asctime)s %(message)s')
 
 	def connect(self):
 		if self.sc.rtm_connect():

@@ -1,5 +1,6 @@
 # RASA
 rasa-model
+rasa-unparsed.txt
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

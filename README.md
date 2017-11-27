@@ -4,6 +4,8 @@ Bot using RASA NLU to answer different questions. Using Wolfram Alpha to get ans
 
 ![bot.png](https://raw.githubusercontent.com/plutov/bot/master/bot.png)
 
+[Article in my blog](http://pliutau.com/create-bot-with-nlu-in-python/) describing how it works.
+
 ### Run it with Docker
 
  - [Get Slack API Token](https://get.slack.help/hc/en-us/articles/215770388-Create-and-regenerate-API-tokens)

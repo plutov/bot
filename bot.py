@@ -2,6 +2,7 @@
 
 import os
 import sys
+import traceback
 from slack.bot import SlackBot
 from nlp.rasa import RasaNLP
 from dataprovider.dataprovider import DataProvider
@@ -15,4 +16,8 @@ try:
 	b = SlackBot(os.environ.get("SLACK_TOKEN"), r)
 	b.start()
 except KeyboardInterrupt:
+	r.snapshot_unparsed_messages("rasa-unparsed.txt")
 	sys.exit(0)
+except:
+	r.snapshot_unparsed_messages("rasa-unparsed.txt")
+	traceback.print_exc()
