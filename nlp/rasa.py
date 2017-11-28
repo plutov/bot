@@ -16,7 +16,7 @@ class RasaNLP(object):
 	]
 	GREET_MSGS = ["Hola!", "Privet!", "Xin chào!"]
 	INTENT_GREET = "greet"
-	INTENTS_QUESTION = ["whatis", "howto"]
+	INTENTS_QUESTION = ["whatis", "howto", "when"]
 	ENTITY_QUERY = "query"
 
 	def __init__(self, data_provider, config_file, data_file, model_dir):

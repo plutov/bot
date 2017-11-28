@@ -260,6 +260,30 @@
             "entity": "query"
           }
         ]
+      },
+      {
+        "text": "When John Lennon died?",
+        "intent": "when",
+        "entities": [
+          {
+            "start": 5,
+            "end": 21,
+            "value": "John Lennon died",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "When Second World War started?",
+        "intent": "when",
+        "entities": [
+          {
+            "start": 5,
+            "end": 29,
+            "value": "Second World War started",
+            "entity": "query"
+          }
+        ]
       }
     ]
   }
