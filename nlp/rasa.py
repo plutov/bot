@@ -9,14 +9,14 @@ from rasa_nlu.components import ComponentBuilder
 
 class RasaNLP(object):
 	COULD_NOT_PARSE_MSGS = [
-		"Sorry, don't know it",
+		"Sorry, I don't know it",
 		"Next time I will know, but not now",
 		"Sorry, can't get what do you mean",
 		"Try something else"
 	]
 	GREET_MSGS = ["Hola!", "Privet!", "Xin chào!"]
 	INTENT_GREET = "greet"
-	INTENTS_QUESTION = ["whatis", "howto", "when"]
+	INTENTS_QUESTION = ["whatis", "howto", "when", "do"]
 	ENTITY_QUERY = "query"
 
 	def __init__(self, data_provider, config_file, data_file, model_dir):

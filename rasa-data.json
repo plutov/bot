@@ -182,9 +182,9 @@
         "intent": "whatis",
         "entities": [
           {
-            "start": 23,
+            "start": 12,
             "end": 27,
-            "value": "life",
+            "value": "meaning of life",
             "entity": "query"
           }
         ]
@@ -281,6 +281,78 @@
             "start": 5,
             "end": 29,
             "value": "Second World War started",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Can you tell me what is the Universe?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 28,
+            "end": 36,
+            "value": "Universe",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Can you tell me who is Bismarck Lepe?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 23,
+            "end": 36,
+            "value": "Bismarck Lepe",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Do plants die of old age?",
+        "intent": "do",
+        "entities": [
+          {
+            "start": 3,
+            "end": 24,
+            "value": "plants die of old age",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Does chewing gum really stay inside you for years?",
+        "intent": "do",
+        "entities": [
+          {
+            "start": 5,
+            "end": 49,
+            "value": "chewing gum really stay inside you for years",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Do you know what is goroutine?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 20,
+            "end": 29,
+            "value": "goroutine",
+            "entity": "query"
+          }
+        ]
+      },
+      {
+        "text": "Can you tell me what is goroutine?",
+        "intent": "whatis",
+        "entities": [
+          {
+            "start": 24,
+            "end": 33,
+            "value": "goroutine",
             "entity": "query"
           }
         ]

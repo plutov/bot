@@ -26,4 +26,4 @@ SLACK_TOKEN=<token> WOLFRAM_APP_ID=<app_id> python3 bot.py
 
 ### RASA
 
-Create initial intentions - https://rasahq.github.io/rasa-nlu-trainer/
+Create initial intentions - https://rasahq.github.io/rasa-nlu-trainer/. During the Bot start we run training process based on `rasa-data.json` intentions. Later we work with messages we can parse, also Bot stores all unparsed messages so we can check them later.
